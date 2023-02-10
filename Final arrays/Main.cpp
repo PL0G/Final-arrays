@@ -6,6 +6,7 @@ int main() {
 	setlocale(LC_ALL, "Russian");
 	int n,sum;
 	
+	std::cout << "Hello world!\n\n";
 	//Сортировка половины массива
 	/*
 	std::cout << "Задача №1.\nИзначальный массив:\n";
@@ -54,7 +55,7 @@ int main() {
 	std::cout << "Средняя температура за месяц:" << (double)sum / size2 << "\nКоличество дней когда температура опустилась ниже "<<n<<" градусов:" << counter;
 	*/
 	//Задача №3
-	/*
+	
 	int m;
 	const int size3 = 20;
 	int arr3[size3];
@@ -68,7 +69,7 @@ int main() {
 		else
 			std::cout << i + 1 << ". " << arr3[i] << "\n";
 	}
-	*/
+	
 
 	return 0;
 }

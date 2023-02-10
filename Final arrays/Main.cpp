@@ -4,7 +4,7 @@
 #include <algorithm>
 int main() {
 	setlocale(LC_ALL, "Russian");
-	int n,sum;
+	int n,sum=0;
 	
 	std::cout << "Hello world!\n\n";
 	//Сортировка половины массива
@@ -55,7 +55,7 @@ int main() {
 	std::cout << "Средняя температура за месяц:" << (double)sum / size2 << "\nКоличество дней когда температура опустилась ниже "<<n<<" градусов:" << counter;
 	*/
 	//Задача №3
-	
+	/*
 	int m;
 	const int size3 = 20;
 	int arr3[size3];
@@ -69,7 +69,38 @@ int main() {
 		else
 			std::cout << i + 1 << ". " << arr3[i] << "\n";
 	}
-	
-
+	*/
+	//Самостоятельная работа
+	//1
+	/*
+	std::cout << "Исходный массив:\n";
+	const int size4 = 30;
+	int arr4[size4];
+	srand(time(NULL));
+	for (int i = 0; i < size4; i++) {
+		arr4[i] = rand() % 201;
+		std::cout << arr4[i] << " ";
+	}
+	std::cout << "\n-------------------\n\n";
+	for (int i = 1; i < size4; i++) {
+		if (arr4[i] > arr4[i - 1])
+			std::cout << arr4[i]<<" ";
+	}
+	std::cout << "\n\n";
+	*/
+	//2
+	std::cout << "Массив:\n";
+	const int size5 = 10;
+	int arr5[size5][size5];
+	srand(time(NULL));
+	for (int i = 0; i < size5; i++) {
+		for (int j = 0; j < size5; j++) {
+			arr5[i][j] = rand() % (11 + 10) - 10;
+			std::cout << arr5[i][j] << "\t";
+			if (i == j)
+				sum += arr5[i][j];
+		}std::cout << "\n";
+	}
+	std::cout << "\n\nСумма чисел на главной диаг.="<< sum;
 	return 0;
 }
